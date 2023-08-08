@@ -1,3 +1,18 @@
+# Test
+
+```shell
+docker run -p 80:80 ibackchina2018/vue-act:latest
+```
+
+```shell
+curl 127.0.0.1:80 
+```
+
+
+
+
+
+
 # vue-act
 
 ## Project setup
