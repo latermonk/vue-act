@@ -17,12 +17,16 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: check and build
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '18.x'  # 指定要使用的 Node.js 版本
       - run: npm install
       - run: npm run build
+
+      - name: push to dockerhub
       - uses: docker/build-push-action@v2
         with:
           context: .
